@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('form#list').submit(function(event){
     event.preventDefault();
 
-    var str = 'How to get away with murder or manslaughter'
+    var str = 'How to get away with murder or manslaughter.'
 
     var words = str.split('');
     console.log(words[3]);
@@ -14,8 +14,15 @@ $(document).ready(function() {
 
     var strCopy = str.split();
     console.log(strCopy);
-    // expected output: Array ["How to get away with murder or manslaughter"]
+    // expected output: Array ["How to get away with murder or manslaughter."]
 
-  });
+    var elements = ['away', 'murder', 'manslaughter'];
 
-    var elements = 
+    console.log(elements.join());
+    // expected output: "away, murder, manslaughter"
+
+    console.log(elements.join());
+    // expected output: "awaymurdermanslaughter"
+
+    console.log(elements.join());
+    // expected output: "away-murder-manslaughter"
