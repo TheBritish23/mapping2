@@ -15,14 +15,13 @@ $(document).ready(function() {
     var strCopy = str.split();
     console.log(strCopy);
     // expected output: Array ["How to get away with murder or manslaughter."]
+  });
+      $("#output").append("<li>"+ item + "</li>");
+        console.log(item)
+    });
+    console.log(inputArray);
 
     var elements = ['away', 'murder', 'manslaughter'];
 
     console.log(elements.join());
     // expected output: "away, murder, manslaughter"
-
-    console.log(elements.join());
-    // expected output: "awaymurdermanslaughter"
-
-    console.log(elements.join());
-    // expected output: "away-murder-manslaughter"
