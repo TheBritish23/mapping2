@@ -15,7 +15,14 @@ $(document).ready(function() {
     var strCopy = str.split();
     console.log(strCopy);
     // expected output: Array ["How to get away with murder or manslaughter."]
+
+  var input = $("#Word").val()
+  var inputArray = input.split(" ")
+  inputArray.sort()
+  var newArray = inputArray.map(function(item) {
+    return item.toUpperCase()
   });
+  newArray.forEach(function(item){
       $("#output").append("<li>"+ item + "</li>");
         console.log(item)
     });
@@ -25,3 +32,5 @@ $(document).ready(function() {
 
     console.log(elements.join());
     // expected output: "away, murder, manslaughter"
+  });
+})
