@@ -15,6 +15,7 @@ $(document).ready(function() {
     var strCopy = str.split();
     console.log(strCopy);
     // expected output: Array ["How to get away with murder or manslaughter."]
+  });
 
   var input = $("#Word").val()
   var inputArray = input.split(" ")
@@ -22,15 +23,15 @@ $(document).ready(function() {
   var newArray = inputArray.map(function(item) {
     return item.toUpperCase()
   });
-  newArray.forEach(function(item){
-      $("#output").append("<li>"+ item + "</li>");
-        console.log(item)
-    });
-    console.log(inputArray);
 
-    var elements = ['away', 'murder', 'manslaughter'];
+    var array1 = ['How', 'Away', 'Murder'];
+    console.log('array1: ', array1);
+    // expected output: Array ['How', 'Away', 'Murder']
 
-    console.log(elements.join());
-    // expected output: "away, murder, manslaughter"
+    var reversed = array1.reverse();
+    console.log('reversed: ', reversed);
+    // expected output: Array ['Murder', 'Away', 'How']
+
+    console.log('array1: ', array1.join(" "));
+    // expected output: Array ['Murder', 'Away', 'How']
   });
-})
